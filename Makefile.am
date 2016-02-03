@@ -41,3 +41,16 @@ miniunzip_LDADD = libminizip.la
 
 minizip_SOURCES = minizip.c
 minizip_LDADD = libminizip.la -lz
+
+test:	miniunzip minizip
+	@rm -f $(TEST_FILES)
+	@cp README.md readme.txt
+	@touch -t 200712301223.44 readme.txt
+	./minizip test.zip readme.txt
+	./miniunzip -l test.zip
+	mv readme.txt readme.old
+	./miniunzip test.zip
+	@diff -q README.md readme.txt || echo "Test failed: files differ"
+	@[[ "$$(stat -c %Y readme.txt)" = "$$(stat -c %Y readme.old)" ]] || echo "Test failed: timestamp not preserved"
+	@rm -f $(TEST_FILES)
+
