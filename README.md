@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/polesapart/minizip.svg?branch=master)](https://travis-ci.org/polesapart/minizip)
+
 Minizip zlib contribution that includes:
 
 - AES encryption
