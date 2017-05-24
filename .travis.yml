@@ -1,3 +1,4 @@
 language: c
-install:
- - ./autogen.sh
+script:
+  - mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Debug .. && cmake --build .
+
