@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [![Build Status](https://travis-ci.org/polesapart/minizip.svg?branch=master)](https://travis-ci.org/polesapart/minizip)
 
 # Minizip zlib contribution fork
@@ -6,6 +7,14 @@ Contains the latest bug fixes that having been found all over the internet inclu
 
 ## Features
 
+=======
+# Minizip zlib contribution fork
+
+Contains the latest bug fixes that having been found all over the internet including the minizip forum and zlib developer's mailing list along with some additional features.
+
+## Features
+
+>>>>>>> dc3ad01e3d5928e9105f770b7e896a8e9fe0d3b4
 ### I/O Memory
 
 To unzip from a zip file in memory use fill_memory_filefunc and supply a proper ourmemory_t structure.
