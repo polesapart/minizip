@@ -3,7 +3,7 @@
 # E-Mail:     schmieder.matthias@gmail.com
 # Year:       2016
 #***************************************************************************
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.8.12)
 
 
 # Set a consistent MACOSX_RPATH default across all CMake versions. 
