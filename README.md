@@ -1,7 +1,11 @@
+This fork build status:
+
 [![Build Status](https://travis-ci.org/polesapart/minizip.svg?branch=master)](https://travis-ci.org/polesapart/minizip)
 
 
-# Minizip zlib contribution fork
+# Minizip zlib
+# Forked from https://github.com/nmoinvaz/minizip.git
+
 
 This library is a refactoring of the minizip contribution found in the zlib distribution that is supported on Windows, macOS, and Linux. The motivation for this work has been the inclusion of advanced features, improvements in code maintainability and readability, and the reduction of duplicate code. It is based on the original work of [Gilles Vollant](http://www.winimage.com/zLibDll/minizip.html) that has been contributed to by many people over the years.
 
