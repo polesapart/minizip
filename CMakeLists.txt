@@ -4,7 +4,6 @@
 # Copyright (C)      2016 Matthias Schmieder
 #                         schmieder.matthias@gmail.com
 #***************************************************************************
-cmake_minimum_required(VERSION 2.8)
 
 cmake_minimum_required(VERSION 3.0.2)
 message(STATUS "Using CMake version ${CMAKE_VERSION}")
@@ -38,7 +37,11 @@ set(INSTALL_MAN_DIR ${CMAKE_INSTALL_MANDIR} CACHE PATH "Installation directory f
 set(INSTALL_PKGCONFIG_DIR ${CMAKE_INSTALL_LIBDIR}/pkgconfig CACHE PATH "Installation directory for pkgconfig (.pc) files")
 set(INSTALL_CMAKE_DIR ${CMAKE_INSTALL_LIBDIR}/cmake/minizip CACHE PATH "Installation directory for cmake files.")
 
-set(VERSION "2.2.7")
+# Minizip library version
+set(VERSION "2.7.5")
+
+# Minizip api version
+set(SOVERSION "2.5")
 
 # Set cmake debug postfix to d
 set(CMAKE_DEBUG_POSTFIX "d")
@@ -371,7 +374,6 @@ endif()
 # Include BZIP2 
 if(USE_BZIP2)
     add_definitions(-DHAVE_BZIP2)
-    add_definitions(-DBZ_NO_STDIO)
 
     list(APPEND MINIZIP_SRC "mz_strm_bzip.c")
     list(APPEND MINIZIP_PUBLIC_HEADERS "mz_strm_bzip.h")
